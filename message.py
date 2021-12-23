@@ -1,5 +1,4 @@
 from objection_engine.beans.comment import Comment
-from telegram import Update
 import re
 
 class Message:
