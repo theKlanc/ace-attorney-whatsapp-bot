@@ -18,27 +18,14 @@ bot.
 
 import sys
 sys.path.insert(0, './objection_engine')
-
-import logging
-import whatsappTextParser
-
-from msg_queue import Queue
-
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
-)
-
-logger = logging.getLogger(__name__)
-
-queueList = {}
+import whatsappTextParser as wtp
 
 def main():
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    create_video(parseMessages("convo.txt"));
+    wtp.createVideo(wtp.parseMessages("convo2.txt"));
 
 
 if __name__ == '__main__':
